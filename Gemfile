@@ -4,15 +4,21 @@ ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+gem 'pg', '0.15.1'
 
 group :development, :test do
-    gem 'sqlite3', '1.3.8'
     gem 'rspec-rails', '2.13.1'
+    gem 'guard-rspec', '2.5.0'
+    gem 'spork-rails', '4.0.0'
+    gem 'guard-spork', '1.5.0'
+    gem 'childprocess', '0.3.6'
 end
 
 group :test do
     gem 'selenium-webdriver', '2.35.1'
     gem 'capybara', '2.1.0'
+    gem 'rb-notifu', '0.0.4'
+    gem 'wdm', '0.1.0'
 end
 
 
@@ -32,7 +38,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+group :doc do
+    gem 'sdoc', '~> 0.4.0', require: false
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,6 +58,5 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 group :production do
-    gem 'pg', '0.15.1'
     gem 'rails_12factor', '0.0.2'
 end
