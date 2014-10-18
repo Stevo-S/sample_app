@@ -53,6 +53,10 @@ Spork.prefork do
 
       # Include the Capybara DSL
       config.include Capybara::DSL
+
+
+      # This line was added to make spec recognize path help
+      config.include Rails.application.routes.url_helpers
     end
 end
 
