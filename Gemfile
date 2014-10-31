@@ -6,6 +6,7 @@ ruby '2.0.0'
 gem 'rails', 		'4.1.4'
 gem 'pg', 		'0.15.1'
 gem 'bootstrap-sass', 	'3.2.0.0'
+gem 'bcrypt-ruby',	'3.1.2'
 
 group :development, :test do
     gem 'rspec-rails', '2.13.1'
@@ -53,7 +54,7 @@ end
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]

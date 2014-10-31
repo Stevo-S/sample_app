@@ -27,7 +27,7 @@ test:
   host: localhost
   username: rails-dev
   password:
-  database: sample_app
+  database: sample_app_test
 #production:
 #  <<: *default
 #  database: db/production.sqlite3
